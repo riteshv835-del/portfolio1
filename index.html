@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio</title>
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:#f5f5f5;
+    color:#333;
+}
+
+/* Navbar */
+
+nav{
+    position:fixed;
+    width:100%;
+    top:0;
+    left:0;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 60px;
+    background:#111;
+    z-index:1000;
+    transition:.4s;
+}
+
+nav.scrolled{
+    background:#0d6efd;
+    box-shadow:0 5px 15px rgba(0,0,0,.2);
+}
+
+.logo{
+    color:white;
+    font-size:28px;
+    font-weight:bold;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+}
+
+nav ul li{
+    margin-left:30px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    font-size:18px;
+    transition:.3s;
+}
+
+nav ul li a:hover{
+    color:gold;
+}
+
+/* Hero */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:120px 10%;
+    gap:80px;
+    flex-wrap:wrap;
+}
+
+.hero img{
+    width:340px;
+    height:340px;
+    border-radius:50%;
+    object-fit:cover;
+    border:8px solid #0d6efd;
+    box-shadow:0 10px 25px rgba(0,0,0,.3);
+}
+
+.hero-text{
+    max-width:600px;
+}
+
+.hero-text h3{
+    font-size:28px;
+}
+
+.hero-text h1{
+    font-size:55px;
+    color:#0d6efd;
+}
+
+.hero-text h2{
+    margin:15px 0;
+    color:#444;
+}
+
+.hero-text p{
+    line-height:1.8;
+    margin-bottom:25px;
+}
+
+/* Buttons */
+
+.btn{
+    display:inline-block;
+    padding:12px 28px;
+    margin:10px 10px 10px 0;
+    border-radius:40px;
+    text-decoration:none;
+    color:white;
+    background:#0d6efd;
+    transition:.4s;
+}
+
+.btn:hover{
+    background:#111;
+    transform:translateY(-3px);
+}
+
+/* Social */
+
+.social{
+    margin-top:20px;
+}
+
+.social a{
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    background:#0d6efd;
+    color:white;
+    text-decoration:none;
+    margin-right:10px;
+    transition:.4s;
+    font-size:20px;
+}
+
+.social a:hover{
+    background:#111;
+    transform:scale(1.1);
+}
+
+/* Sections */
+
+section{
+    padding:80px 10%;
+}
+
+.title{
+    text-align:center;
+    margin-bottom:40px;
+    font-size:38px;
+    color:#0d6efd;
+}
+
+.about,
+.skills,
+.projects,
+.contact{
+    background:white;
+    margin:40px auto;
+    border-radius:15px;
+    padding:40px;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+/* Skills */
+
+.skill-list{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+    gap:20px;
+}
+
+.skill{
+    background:#0d6efd;
+    color:white;
+    text-align:center;
+    padding:18px;
+    border-radius:10px;
+    font-weight:bold;
+}
+
+/* Projects */
+
+.project-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:#f1f1f1;
+    padding:25px;
+    border-radius:10px;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+/* Contact */
+
+.contact p{
+    margin:10px 0;
+    font-size:18px;
+}
+
+/* Footer */
+
+footer{
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+nav{
+padding:15px 20px;
+flex-direction:column;
+}
+
+nav ul{
+margin-top:10px;
+}
+
+.hero{
+text-align:center;
+}
+
+.hero img{
+width:250px;
+height:250px;
+}
+
+.hero-text h1{
+font-size:40px;
+}
+
+}
+
+</style>
+
+</head>
+<body>
+
+<!-- Navbar -->
+
+<nav id="navbar">
+
+<div class="logo">Ritesh Kumar Verma</div>
+
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+</nav>
+
+<!-- Hero -->
+
+<section class="hero" id="home">
+
+<img src="IMG_20230325_183645.jpg.jpeg" alt="Profile">
+
+<div class="hero-text">
+
+<h3>Hello, I'm</h3>
+
+<h1>Ritesh Kumar Verma</h1>
+
+<h2>Robotics Trainer Engineer | Web Developer</h2>
+
+<p>
+I am passionate about Robotics, Arduino, IoT, Programming,
+and Web Development. I love building innovative projects
+and teaching students modern technologies.
+</p>
+
+<a href="Ritesh Kumar Verma 1 (1).pdf" class="btn" onclick="downloadCv()">Download CV</a>
+
+<a href="#contact" class="btn">Hire Me</a>
+
+<div class="social">
+
+<a href="https://www.facebook.com/share/1JMm75a9zK/"><i class="fab fa-facebook-f"></i></a>
+
+<a href="https://www.linkedin.com/in/ritesh-kumar-83531b277/"><i class="fab fa-linkedin-in"></i></a>
+
+<a href="https://github.com/riteshv835-del"><i class="fab fa-github"></i></a>
+
+
+</div>
+
+</div>
+
+</section>
+
+<!-- About -->
+
+<section id="about">
+
+<div class="about">
+
+<h2 class="title">About Me</h2>
+
+<p>
+
+I am a Robotics Trainer with experience in Arduino,
+IoT, Embedded Systems, Web Development, and AI.
+I enjoy creating innovative robotics projects and
+helping students learn technology through practical activities.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- Skills -->
+
+<section id="skills">
+
+<div class="skills">
+
+<h2 class="title">Skills</h2>
+
+<div class="skill-list">
+
+<div class="skill">HTML</div>
+
+<div class="skill">CSS</div>
+
+<div class="skill">JavaScript</div>
+
+<div class="skill">Arduino</div>
+
+<div class="skill">IoT</div>
+
+<div class="skill">Python</div>
+
+<div class="skill">C Programming</div>
+
+<div class="skill">Robotics</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Projects -->
+
+<section id="projects">
+
+<div class="projects">
+
+<h2 class="title">Projects</h2>
+
+<div class="project-grid">
+
+<div class="card">
+
+<h3>Smart Vehicle</h3>
+
+<p>Autonomous robot using IR and Ultrasonic sensors.</p>
+
+</div>
+
+<div class="card">
+
+<h3>IoT Ventilator</h3>
+
+<p>Smart monitoring system using IoT technology.</p>
+
+</div>
+
+<div class="card">
+
+<h3>RF Controlled Robot</h3>
+
+<p>Wireless robot with manual and autonomous mode.</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Contact -->
+
+<section id="contact">
+
+<div class="contact">
+
+<h2 class="title">Contact Me</h2>
+
+<p><strong>Email:</strong> riteshv835@gmail.com</p>
+
+<p><strong>Phone:</strong> +91 7235939584</p>
+
+<p><strong>Location:</strong> Lucknow, India</p>
+
+<a onclick="sendMail()" class="btn">Send Email</a>
+
+</div>
+
+</section>
+
+<!-- Footer -->
+
+<footer>
+
+<p>
+© 2026 Ritesh Kumar Verma | All Rights Reserved
+</p>
+
+</footer>
+
+<script>
+
+    function sendMail(){
+        window.location.href='mailto:riteshv835@gmail.com';
+    }
+
+// Navbar color change
+
+window.addEventListener("scroll",function(){
+
+const nav=document.getElementById("navbar");
+
+if(window.scrollY>50){
+nav.classList.add("scrolled");
+}
+else{
+nav.classList.remove("scrolled");
+}
+
+});
+
+// CV Button
+
+function downloadCV() {
+    const link = document.createElement("a");
+    link.href = "Ritesh Kumar Verma 1 (1).pdf";
+    link.download = "Ritesh Kumar Verma 1 (1).pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+}
+
+</script>
+
+</body>
+</html>
